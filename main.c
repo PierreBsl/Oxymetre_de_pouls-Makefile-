@@ -11,9 +11,10 @@
 int main() {
    int etat=0;
    oxy myOxy;
-   myOxy.spo2=99;
-   myOxy.pouls=75;
+   myOxy.spo2=96;
+   myOxy.pouls=120;
    affichage(myOxy);
+
    /*
    //param_fir* myFIR = init_fir();//init FIR
    //param_iir* myIIR = init_iir();//initIIR

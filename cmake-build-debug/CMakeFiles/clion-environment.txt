@@ -1,0 +1,4 @@
+ToolSet: Debian GNU/Linux 9 (stretch) (local)@C:\Users\pierr\AppData\Local\Microsoft\WindowsApps\debian.exe
+Options: 
+
+Options:

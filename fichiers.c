@@ -1,5 +1,6 @@
 #include "fichiers.h"
 
+
 FILE* initFichier(char* nomFichier ){
 	
 	FILE* pf=fopen(nomFichier,"r");
@@ -24,7 +25,5 @@ absorp lireFichier(FILE* pf, int* etat){
 
 void finFichier(FILE* pf){
 	fclose(pf);
-
-
 }
 

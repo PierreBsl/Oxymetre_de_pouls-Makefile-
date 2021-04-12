@@ -11,8 +11,8 @@ void affichage(oxy myOxy){
             FILE* P_VERROU = fopen(".verrouData", "w");
             FILE* data = fopen("Data.txt","w+");
             fprintf(data,"%d\n%d", myOxy.spo2,myOxy.pouls); //ajoute les valeurs de spo2 et pouls dans le fichier Data.txt
-            fclose(data);
-            fclose(P_VERROU);
+            finFichier(data);
+            finFichier(P_VERROU);
             remove(".verrouData");
 		}
 
