@@ -9,7 +9,6 @@
 #include "mesure.h"
 
 int main() {
-   int etat=0;
    oxy myOxy;
    myOxy.spo2=96;
    myOxy.pouls=120;

@@ -9,8 +9,6 @@
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/affichage.c
 affichage.h
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/affichage.h
-fichiers.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/fichiers.h
 
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/affichage.h
 define.h
@@ -23,32 +21,12 @@ stdio.h
 -
 stdlib.h
 -
-fichiers.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/fichiers.h
 
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/fichiers.c
 fichiers.h
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/fichiers.h
-affichage.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/affichage.h
-fichiers.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/fichiers.h
-fir.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/fir.h
-iir.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/iir.h
-integration.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/integration.h
-lecture.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/lecture.h
-mesure.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/mesure.h
 
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/fichiers.h
-stdio.h
--
-stdlib.h
--
 define.h
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/define.h
 

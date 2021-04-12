@@ -35,4 +35,13 @@ typedef struct{
 	} oxy;
 
 
+typedef struct{
+
+    float pre_x_acr;
+    float pre_y_acr;
+    float pre_x_acir;
+    float pre_y_acir;
+
+} param_iir;
+
 #endif // DEFINE_H
