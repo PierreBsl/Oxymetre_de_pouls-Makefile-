@@ -10,9 +10,7 @@ void affichage(oxy myOxy){
         } else { //Le fichier n'existe pas
             FILE* P_VERROU = fopen(".verrouData", "w");
             FILE* data = fopen("Data.txt","w+");
-            int spo2 = myOxy.spo2;
-            int pouls = myOxy.pouls;
-            fprintf(data,"%d\n%d", spo2,pouls); //ajoute les valeurs de spo2 et pouls dans le fichier Data.txt
+            fprintf(data,"%d\n%d", myOxy.spo2,myOxy.pouls); //ajoute les valeurs de spo2 et pouls dans le fichier Data.txt
             fclose(data);
             fclose(P_VERROU);
             remove(".verrouData");

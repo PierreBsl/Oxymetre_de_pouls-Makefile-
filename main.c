@@ -11,7 +11,7 @@
 int main() {
    int etat=0;
    oxy myOxy;
-   myOxy.spo2=98;
+   myOxy.spo2=99;
    myOxy.pouls=75;
    affichage(myOxy);
    /*
