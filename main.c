@@ -9,10 +9,11 @@
 #include "mesure.h"
 
 int main() {
-   oxy myOxy;
+   /*oxy myOxy;
    myOxy.spo2=96;
    myOxy.pouls=120;
-   affichage(myOxy);
+   affichage(myOxy);*/
+   iirTest("record1_fir.dat");
 
    /*
    //param_fir* myFIR = init_fir();//init FIR

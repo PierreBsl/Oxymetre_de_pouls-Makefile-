@@ -37,10 +37,10 @@ typedef struct{
 
 typedef struct{
 
-    float pre_x_acr;
-    float pre_y_acr;
-    float pre_x_acir;
-    float pre_y_acir;
+    float x_moins_un_acr;
+    float y_moins_un_acr;
+    float x_moins_un_acir;
+    float y_moins_un_acir;
 
 } param_iir;
 

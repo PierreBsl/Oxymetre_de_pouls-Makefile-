@@ -9,6 +9,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="WSL (061d6a11-c1a2-4baf-a64a-7d7c9014e2d4)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="WSL (57f8494d-2b0a-4bdb-95c8-c634dd9cafc8)">
         <serverdata>
           <mappings>
@@ -24,6 +31,13 @@
         </serverdata>
       </paths>
       <paths name="WSL (6895cacb-db48-469a-9b88-6c00499a1fef)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="WSL (71ee8912-0067-43e4-a74c-1f8175480d15)">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
