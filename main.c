@@ -14,8 +14,7 @@ int main() {
    myOxy.pouls=120;
    affichage(myOxy);
    iirTest("record1_fir.dat");*/
-   FILE* data= initFichier("record1_bin.dat");
-   lecture(data, 0);
+    mesureTest("record1_iir.dat");
 
    /*
    //param_fir* myFIR = init_fir();//init FIR

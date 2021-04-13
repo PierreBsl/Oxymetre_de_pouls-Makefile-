@@ -10,6 +10,7 @@ CMakeFiles/Examen_Final.dir/fichiers.c.o: ../fichiers.c
 CMakeFiles/Examen_Final.dir/fichiers.c.o: ../fichiers.h
 
 CMakeFiles/Examen_Final.dir/fir.c.o: ../define.h
+CMakeFiles/Examen_Final.dir/fir.c.o: ../fichiers.h
 CMakeFiles/Examen_Final.dir/fir.c.o: ../fir.c
 CMakeFiles/Examen_Final.dir/fir.c.o: ../fir.h
 
@@ -35,6 +36,7 @@ CMakeFiles/Examen_Final.dir/main.c.o: ../main.c
 CMakeFiles/Examen_Final.dir/main.c.o: ../mesure.h
 
 CMakeFiles/Examen_Final.dir/mesure.c.o: ../define.h
+CMakeFiles/Examen_Final.dir/mesure.c.o: ../fichiers.h
 CMakeFiles/Examen_Final.dir/mesure.c.o: ../mesure.c
 CMakeFiles/Examen_Final.dir/mesure.c.o: ../mesure.h
 
