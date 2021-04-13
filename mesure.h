@@ -1,6 +1,7 @@
 #include "define.h"
 
 oxy mesureTest(char* filename);
-int init_mesure(absorp myAbsorp, FILE* irrData, int* state, int half_period);
+oxy mesure(absorp myAbsorp, echantillon* ech, oxy myOxy);
+void init_echantillon(echantillon* ech);
 
 	

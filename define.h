@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 
 /*! ------------------------------------------------------------
@@ -28,6 +29,17 @@ typedef struct{
   \brief   
   
   ------------------------------------------------------------*/
+typedef struct{
+    int MaxAcr;
+    int MaxAcir;
+    int MinAcr;
+    int MinAcir;
+    int Dcr;
+    int Dcir;
+    int periode;
+    bool premierePeriode;
+    bool passageParZero;
+}echantillon;
 
 typedef struct{
 		int spo2;  /*!< SPO2 */
