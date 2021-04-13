@@ -15,7 +15,7 @@ oxy mesureTest(char* filename){
         if(file_state!=EOF){
             myOxy = mesure(myAbsorp, &ech, myOxy);
         }else{
-            printf("end of file in Mesure\n");
+            printf("End of file in Mesure\n");
         }
     }
 	return myOxy;
