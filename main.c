@@ -12,8 +12,10 @@ int main() {
    /*oxy myOxy;
    myOxy.spo2=96;
    myOxy.pouls=120;
-   affichage(myOxy);*/
-   iirTest("record1_fir.dat");
+   affichage(myOxy);
+   iirTest("record1_fir.dat");*/
+   FILE* data= initFichier("record1_bin.dat");
+   lecture(data, 0);
 
    /*
    //param_fir* myFIR = init_fir();//init FIR
