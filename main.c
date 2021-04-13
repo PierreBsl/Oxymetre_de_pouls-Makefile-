@@ -9,5 +9,5 @@
 #include "mesure.h"
 
 int main() {
-    mesureTest("record1_iir.dat");
+
 }

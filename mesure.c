@@ -14,13 +14,10 @@ oxy mesureTest(char* filename){
         myAbsorp = lireFichier(iirData, &file_state); //on lit le fichier de sortie de IIR => correspondant à l'entrée de Oxy
         if(file_state!=EOF){
             myOxy = mesure(myAbsorp, &ech, myOxy);
-            printf("SpO2=%d\n",myOxy.spo2);
-            printf("Pouls=%d\n\n",myOxy.pouls);
         }else{
-            printf("end of file\n");
+            printf("end of file in Mesure\n");
         }
     }
-    printf("retour de myOxy");
 	return myOxy;
 }
 oxy mesure(absorp myAbsorp, echantillon* ech, oxy myOxy1){
