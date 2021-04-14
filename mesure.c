@@ -56,6 +56,7 @@ oxy mesure(absorp myAbsorp, echantillon* ech, oxy myOxy1){
         myOxy1.pouls = pouls;
         ech->periode=0;
         ech->passageParZero=false;
+        return myOxy1;
     }
     ech->periode++;
     return myOxy1;

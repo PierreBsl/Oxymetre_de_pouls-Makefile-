@@ -53,20 +53,6 @@ define.h
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/define.h
 
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/integration.c
-
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/integration.h
-define.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/define.h
-
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/lecture.c
-lecture.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/lecture.h
-
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/lecture.h
-define.h
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/define.h
-
-/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/main.c
 define.h
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/define.h
 affichage.h
@@ -83,6 +69,22 @@ lecture.h
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/lecture.h
 mesure.h
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/mesure.h
+
+/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/integration.h
+define.h
+/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/define.h
+
+/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/lecture.c
+lecture.h
+/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/lecture.h
+
+/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/lecture.h
+define.h
+/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/define.h
+
+/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/main.c
+fir.h
+/mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/fir.h
 
 /mnt/c/Users/pierr/OneDrive/Bureau/ISEN/A3/langage_C/Examen_Final/mesure.c
 mesure.h

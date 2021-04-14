@@ -42,6 +42,12 @@ typedef struct{
 }echantillon;
 
 typedef struct{
+    int cmpt;
+    absorp absorp1[51]; //on creer un tableau de 51 absorp
+    bool premierRemplissage;
+}compteur;
+
+typedef struct{
 		int spo2;  /*!< SPO2 */
 		int pouls;  /*!< Pouls */
 	} oxy;

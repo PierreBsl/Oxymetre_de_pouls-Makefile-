@@ -19,21 +19,23 @@ CMakeFiles/Examen_Final.dir/iir.c.o: ../fichiers.h
 CMakeFiles/Examen_Final.dir/iir.c.o: ../iir.c
 CMakeFiles/Examen_Final.dir/iir.c.o: ../iir.h
 
+CMakeFiles/Examen_Final.dir/integration.c.o: ../affichage.h
+CMakeFiles/Examen_Final.dir/integration.c.o: ../define.h
+CMakeFiles/Examen_Final.dir/integration.c.o: ../fichiers.h
+CMakeFiles/Examen_Final.dir/integration.c.o: ../fir.h
+CMakeFiles/Examen_Final.dir/integration.c.o: ../iir.h
 CMakeFiles/Examen_Final.dir/integration.c.o: ../integration.c
+CMakeFiles/Examen_Final.dir/integration.c.o: ../integration.h
+CMakeFiles/Examen_Final.dir/integration.c.o: ../lecture.h
+CMakeFiles/Examen_Final.dir/integration.c.o: ../mesure.h
 
 CMakeFiles/Examen_Final.dir/lecture.c.o: ../define.h
 CMakeFiles/Examen_Final.dir/lecture.c.o: ../lecture.c
 CMakeFiles/Examen_Final.dir/lecture.c.o: ../lecture.h
 
-CMakeFiles/Examen_Final.dir/main.c.o: ../affichage.h
 CMakeFiles/Examen_Final.dir/main.c.o: ../define.h
-CMakeFiles/Examen_Final.dir/main.c.o: ../fichiers.h
 CMakeFiles/Examen_Final.dir/main.c.o: ../fir.h
-CMakeFiles/Examen_Final.dir/main.c.o: ../iir.h
-CMakeFiles/Examen_Final.dir/main.c.o: ../integration.h
-CMakeFiles/Examen_Final.dir/main.c.o: ../lecture.h
 CMakeFiles/Examen_Final.dir/main.c.o: ../main.c
-CMakeFiles/Examen_Final.dir/main.c.o: ../mesure.h
 
 CMakeFiles/Examen_Final.dir/mesure.c.o: ../define.h
 CMakeFiles/Examen_Final.dir/mesure.c.o: ../fichiers.h
