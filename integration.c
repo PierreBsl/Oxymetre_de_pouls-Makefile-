@@ -32,10 +32,10 @@ void integrationTest(char* filename)
     while(file_state != EOF){
         myAbsorp = lecture(myFile,&file_state);
         if(file_state!=EOF){
-            myAbsorp = fir(myAbsorp,&firparam);
-            myAbsorp = iir(myAbsorp,&iirparam);
-            myOxy = mesure(myAbsorp,&mesureparam, myOxy);
-            affichage(myOxy);
+            myAbsorp = fir(myAbsorp,&firparam);//On applique le filtre fir
+            myAbsorp = iir(myAbsorp,&iirparam);//On applique le filtre iir
+            myOxy = mesure(myAbsorp,&mesureparam, myOxy);//On convertit les valeurs d'absorp en SpO2 et Pouls
+            affichage(myOxy);//On affiche les valeurs contenues dans myOxy
             iteration++;
         }else{
             printf("End of file in Integration.c\n");

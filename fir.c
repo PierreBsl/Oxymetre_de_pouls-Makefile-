@@ -12,7 +12,7 @@ absorp firTest(char* filename){
     init_fir(&firparam);
 
     int state =0; //fichier variable
-	FILE* data = initFichier(filename); //creation du fichier correspondant à l'entrée (ici record1.dat)
+	FILE* data = initFichier(filename); //creation du fichier correspondant à l'entrée
 
 	while (state != EOF){ //on parcourt jusqu'à la fin du fichier
 	    myAbsorp = lireFichier(data,&state);
