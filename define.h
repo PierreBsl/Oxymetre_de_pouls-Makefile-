@@ -37,12 +37,12 @@ typedef struct{
     int Dcr;
     int Dcir;
     int periode;
-    int premierePeriode;
     int passageParZero;
+    int poulsPeriod1;
+    int SpO2Period1;
 }param_mesure;
 
 typedef struct{
-    int cmpt;
     absorp absorp1[51]; //on creer un tableau de 51 absorp
     bool premierRemplissage;
 }param_fir;

@@ -45,10 +45,17 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
         } else {
             SpO2 = RsIR * -35.7 + 120;//fonction affine entre 1 et 3.4
         }
+        int SpO2Final=(SpO2+ech->SpO2Period1)/2;
+        ech->SpO2Period1 = SpO2;
+
         float periode=ech->periode;
-        int pouls = 60/(periode*0.002);
-        myOxy1.spo2 = SpO2;
-        myOxy1.pouls = pouls;
+        int pouls = 60/(periode*0.002); //toutes les 2ms
+        int poulsFinal=(pouls+ech->poulsPeriod1)/2;
+        ech->poulsPeriod1 = pouls;
+
+
+        myOxy1.spo2 = SpO2Final;
+        myOxy1.pouls = poulsFinal;
         ech->periode=0;
         ech->passageParZero=false;
         return myOxy1;
@@ -66,4 +73,6 @@ void init_mesure(param_mesure* ech){
     ech->premierePeriode=false;
     ech->passageParZero=false;
     ech->periode=0;
+    ech->poulsPeriod1=0;
+    ech->SpO2Period1=0;
 }
