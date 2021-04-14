@@ -30,8 +30,7 @@ absorp fir(absorp myAbsorpS, param_fir * cpt){ //changer avec myAbsorpTmp
     myAbsorpTmp.acir=0;
     myAbsorpTmp.dcr=0;
     myAbsorpTmp.dcir=0;
-    int j;
-    int k;
+    int j, k;
 
     for(k=50; k>0; k--){
         cpt->absorp1[k]=cpt->absorp1[k-1];

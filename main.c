@@ -1,5 +1,5 @@
 #include "integration.h"
 
 int main() {
-    integrationTest("record1.dat");
+    integrationTest("record1_bin.dat");
 }

@@ -40,18 +40,32 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
         float PtP_Acir = ech->MaxAcir - ech->MinAcir;
 
         float RsIR = (PtP_Acr / ech->Dcr) / (PtP_Acir / ech->Dcir);
+        printf("PtP_ACr = %f\nPtP_ACir = %f\nDCr = %d\nDCir = %d\n----------\n",PtP_Acr,PtP_Acir,ech->Dcr,ech->Dcir);
         if (RsIR < 1) {
-            SpO2 = RsIR * -25 + 110;//fonction affine entre 0 et 1
+            SpO2 = RsIR * (-25) + 110;//fonction affine entre 0 et 1
         } else {
-            SpO2 = RsIR * -35.7 + 120;//fonction affine entre 1 et 3.4
+            SpO2 = RsIR * (-35.7) + 120;//fonction affine entre 1 et 3.4
         }
-        int SpO2Final=(SpO2+ech->SpO2Period1)/2;
-        ech->SpO2Period1 = SpO2;
+        int SpO2Final;
+        if(ech->SpO2Period1==0){
+            ech->SpO2Period1 = SpO2;
+            SpO2Final=SpO2;
+        }else {
+            SpO2Final = (SpO2 + ech->SpO2Period1) / 2;
+            ech->SpO2Period1 = SpO2;
+        }
 
         float periode=ech->periode;
         int pouls = 60/(periode*0.002); //toutes les 2ms
-        int poulsFinal=(pouls+ech->poulsPeriod1)/2;
-        ech->poulsPeriod1 = pouls;
+
+        int poulsFinal;
+        if(ech->poulsPeriod1 == 0){
+            ech->poulsPeriod1 = pouls;
+            poulsFinal=pouls;
+        }else{
+            poulsFinal=(pouls+ech->poulsPeriod1)/2;
+            ech->poulsPeriod1 = pouls;
+        }
 
         myOxy1.spo2 = SpO2Final;
         myOxy1.pouls = poulsFinal;

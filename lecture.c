@@ -1,6 +1,5 @@
 #include "lecture.h"
 
-
 absorp lecture(FILE* file_pf, int* file_state){
 
 	absorp myAbsorp;
@@ -12,7 +11,7 @@ absorp lecture(FILE* file_pf, int* file_state){
 	float ACr=0, DCr=0, ACir=0, DCir=0;
 	*file_state = fscanf(file_pf, "%f,%f,%f,%f", &ACr,&DCr,&ACir,&DCir);
 	if(*file_state==EOF){
-        printf("Limite de fichier atteinte par la fonction lecture!");
+        //printf("Limite de fichier atteinte par la fonction lecture!");
 	    return myAbsorp;
 	}
 	while(*file_state!=4){

@@ -25,13 +25,11 @@ void integrationTest(char* filename)
     FILE* myFile = initFichier(filename); //mettre record.1.dat
 
     while(file_state != EOF){
-        myAbsorp = lireFichier(myFile,&file_state);
+        myAbsorp = lecture(myFile,&file_state);
         if(file_state!=EOF){
             myAbsorp = fir(myAbsorp,&firparam);
             myAbsorp = iir(myAbsorp,&iirparam);
             myOxy = mesure(myAbsorp,&mesureparam, myOxy);
-            printf("SpO2 = %d\n",myOxy.spo2);
-            printf("Pouls = %d\n",myOxy.pouls);
             affichage(myOxy);
         }else{
             printf("End of file in Integration.c\n");

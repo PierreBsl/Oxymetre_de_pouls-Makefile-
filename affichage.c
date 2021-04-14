@@ -6,7 +6,7 @@ void affichage(oxy myOxy){
     //si pas de .verrouData alors on peut écrire ou lire le fichier
 
 		if(  access( ".verrouData", F_OK) != -1){ //Le fichier existe
-            printf("Il existe .verrouData. Aucune action n'est possible !\n");
+            //printf("Il existe .verrouData. Aucune action n'est possible !\n");
         } else { //Le fichier n'existe pas
             FILE* P_VERROU = fopen(".verrouData", "w");
             FILE* data = fopen("Data.txt","w+");
