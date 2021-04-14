@@ -24,16 +24,11 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
 
     int SpO2 = 0;
 
-    if (myAbsorp.acr == 0 && ech->periode<6 && ech->premierePeriode==0){
-        ech->periode++;
-        return myOxy1;
-    }else{
-        ech->premierePeriode=1;
-        if (myAbsorp.acr >= ech->MaxAcr) { ech->MaxAcr = myAbsorp.acr; }
-        if (myAbsorp.acr <= ech->MinAcr) { ech->MinAcr = myAbsorp.acr; }
-        if (myAbsorp.acir >= ech->MaxAcir) { ech->MaxAcir = myAbsorp.acir; }
-        if (myAbsorp.acir <= ech->MinAcir) { ech->MinAcir = myAbsorp.acir; }
-    }
+    if (myAbsorp.acr >= ech->MaxAcr) { ech->MaxAcr = myAbsorp.acr; }
+    if (myAbsorp.acr <= ech->MinAcr) { ech->MinAcr = myAbsorp.acr; }
+    if (myAbsorp.acir >= ech->MaxAcir) { ech->MaxAcir = myAbsorp.acir; }
+    if (myAbsorp.acir <= ech->MinAcir) { ech->MinAcir = myAbsorp.acir; }
+
     if (myAbsorp.acr < 0 && ech->passageParZero == 0) {
         ech->passageParZero = 1;
     }
