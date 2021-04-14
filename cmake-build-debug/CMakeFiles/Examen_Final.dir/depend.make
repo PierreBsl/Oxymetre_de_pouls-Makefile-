@@ -34,7 +34,7 @@ CMakeFiles/Examen_Final.dir/lecture.c.o: ../lecture.c
 CMakeFiles/Examen_Final.dir/lecture.c.o: ../lecture.h
 
 CMakeFiles/Examen_Final.dir/main.c.o: ../define.h
-CMakeFiles/Examen_Final.dir/main.c.o: ../fir.h
+CMakeFiles/Examen_Final.dir/main.c.o: ../integration.h
 CMakeFiles/Examen_Final.dir/main.c.o: ../main.c
 
 CMakeFiles/Examen_Final.dir/mesure.c.o: ../define.h

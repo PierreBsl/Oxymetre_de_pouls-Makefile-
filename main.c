@@ -1,5 +1,5 @@
-#include "fir.h"
+#include "integration.h"
 
 int main() {
-    firTest("record1.dat");
+    integrationTest("record1.dat");
 }

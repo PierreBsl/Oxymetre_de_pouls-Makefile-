@@ -8,20 +8,36 @@
 #include "mesure.h"
 void integrationTest(char* filename)
 {
-        int etat=0;
-        absorp myAbsorp;
-        oxy myOxy;
-        FILE* myFile = initFichier(filename);
-        do{
-            myAbsorp = lireFichier(myFile,&etat);
-            //myAbsorp = fir(myAbsorp,);
-            //myAbsorp = iir(myAbsorp);
-            //myOxy = mesure(myAbsorp,;
+    int file_state=0;
+    absorp myAbsorp;
+    absorp myAbsorp1;
+    absorp myAbsorp2;
+
+    oxy myOxy;
+    // Déclaration pour FIR
+    param_fir firparam;
+    init_fir(&firparam);
+    // Déclaration pour IIR
+    param_iir iirparam;
+    init_iir(&iirparam);
+    // Déclaration pour Mesure
+    param_mesure mesureparam;
+    init_mesure(&mesureparam);
+
+    FILE* myFile = initFichier(filename); //mettre record.1.dat
+
+    while(file_state != EOF){
+        myAbsorp = lireFichier(myFile,&file_state);
+        if(file_state!=EOF){
+            myAbsorp1 = fir(myAbsorp,&firparam);
+            myAbsorp2 = iir(myAbsorp1,&iirparam);
+            myOxy = mesure(myAbsorp2,&mesureparam, myOxy);
+            printf("SpO2 = %d\n",myOxy.spo2);
+            printf("Pouls = %d\n",myOxy.pouls);
             affichage(myOxy);
-        }while( etat != EOF );
-        finFichier(myFile);
-        //fin_mesure(myMes);
-        //fin_iir(myIIR);
-        //fin_fir(myFIR) ;
-        return EXIT_SUCCESS;
+        }else{
+            printf("End of file in Integration.c\n");
+        }
+    }
+    finFichier(myFile);
 }

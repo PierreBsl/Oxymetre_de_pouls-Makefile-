@@ -8,8 +8,8 @@ typedef struct{
 absorp firTest(char* filename){
     absorp myAbsorp;
     absorp myAbsorpFinal;
-    compteur compteur1;
-    init_compteur(&compteur1);
+    param_fir firparam;
+    init_fir(&firparam);
 
     int state =0; //fichier variable
 	FILE* data = initFichier(filename); //creation du fichier correspondant à l'entrée (ici record1.dat)
@@ -17,14 +17,14 @@ absorp firTest(char* filename){
 	while (state != EOF){ //on parcourt jusqu'à la fin du fichier
 	    myAbsorp = lireFichier(data,&state);
 	    if(state!=EOF){
-            myAbsorpFinal = fir(myAbsorp, &compteur1);
+            myAbsorpFinal = fir(myAbsorp, &firparam);
         }else{
 	        printf("End of file in Fir\n");
 	    }
 	}
 	return myAbsorpFinal;
 }
-absorp fir(absorp myAbsorpS, compteur* cpt){ //changer avec myAbsorpTmp
+absorp fir(absorp myAbsorpS, param_fir * cpt){ //changer avec myAbsorpTmp
     absorp myAbsorpTmp; //valeur temporaire
     myAbsorpTmp.acr=0; //initialisation de toutes nos valeurs à zéro
     myAbsorpTmp.acir=0;
@@ -46,7 +46,7 @@ absorp fir(absorp myAbsorpS, compteur* cpt){ //changer avec myAbsorpTmp
 
     return myAbsorpTmp;
 }
-void init_compteur(compteur* cpt){
+void init_fir(param_fir * cpt){
     cpt->cmpt=50;
     int i=0;
     for(i; i<51; i++){

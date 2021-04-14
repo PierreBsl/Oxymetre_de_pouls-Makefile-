@@ -39,13 +39,13 @@ typedef struct{
     int periode;
     bool premierePeriode;
     bool passageParZero;
-}echantillon;
+}param_mesure;
 
 typedef struct{
     int cmpt;
     absorp absorp1[51]; //on creer un tableau de 51 absorp
     bool premierRemplissage;
-}compteur;
+}param_fir;
 
 typedef struct{
 		int spo2;  /*!< SPO2 */

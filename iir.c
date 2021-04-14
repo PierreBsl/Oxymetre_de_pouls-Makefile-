@@ -4,7 +4,7 @@ absorp iirTest(char* filename){
 	absorp myAbsorp;
 	absorp myAbsorpTmp;
     param_iir preAbsorp;
-    init_preAbsorp(&preAbsorp);
+    init_iir(&preAbsorp);
     int file_state = 0;
     FILE* firData = initFichier(filename);
 
@@ -32,7 +32,7 @@ absorp iir(absorp myAbsorp, param_iir* preAbsorp){
     return myAbsorp;
 }
 
-void init_preAbsorp(param_iir* pre_absorp) {
+void init_iir(param_iir* pre_absorp) {
     pre_absorp->x_moins_un_acr = 0;
     pre_absorp->x_moins_un_acir = 0;
     pre_absorp->y_moins_un_acr = 0;

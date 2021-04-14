@@ -4,8 +4,8 @@
 oxy mesureTest(char* filename){
 	oxy myOxy;
 	absorp myAbsorp;
-	echantillon ech;
-    init_echantillon(&ech);
+	param_mesure ech;
+    init_mesure(&ech);
     int file_state = 0;
 
 	FILE* iirData = initFichier(filename);//lis le fichier une premiere fois pour calculer la période
@@ -20,7 +20,7 @@ oxy mesureTest(char* filename){
     }
 	return myOxy;
 }
-oxy mesure(absorp myAbsorp, echantillon* ech, oxy myOxy1){
+oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
 
     int SpO2 = 0;
 
@@ -61,7 +61,7 @@ oxy mesure(absorp myAbsorp, echantillon* ech, oxy myOxy1){
     ech->periode++;
     return myOxy1;
 }
-void init_echantillon(echantillon* ech){
+void init_mesure(param_mesure* ech){
     ech->MaxAcr=1;
     ech->MaxAcir=1;
     ech->MinAcr=0;
