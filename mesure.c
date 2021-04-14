@@ -48,7 +48,7 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
         if (RsIR < 1) {
             SpO2 = RsIR * -25 + 110;//fonction affine entre 0 et 1
         } else {
-            SpO2 = RsIR * -33 + 120;//fonction affine entre 1 et 3.4
+            SpO2 = RsIR * -35.7 + 120;//fonction affine entre 1 et 3.4
         }
         float periode=ech->periode;
         int pouls = 60/(periode*0.002);
