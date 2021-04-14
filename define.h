@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 
 /*! ------------------------------------------------------------
@@ -44,14 +43,12 @@ typedef struct{
 
 typedef struct{
     absorp absorp1[51]; //on creer un tableau de 51 absorp
-    bool premierRemplissage;
 }param_fir;
 
 typedef struct{
 		int spo2;  /*!< SPO2 */
 		int pouls;  /*!< Pouls */
 	} oxy;
-
 
 typedef struct{
 

@@ -12,6 +12,8 @@ void integrationTest(char* filename)
     absorp myAbsorp;
 
     oxy myOxy;
+    myOxy.spo2=0;
+    myOxy.pouls=0;
 
     // Déclaration pour FIR
     param_fir firparam;

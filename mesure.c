@@ -39,7 +39,7 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
         float PtP_Acir = ech->MaxAcir - ech->MinAcir;
 
         float RsIR = (PtP_Acr / ech->Dcr) / (PtP_Acir / ech->Dcir);
-        printf("******* Period *******\nPtP_ACr = %f\nPtP_ACir = %f\nDCr = %d\nDCir = %d\n-----------\n",PtP_Acr,PtP_Acir,ech->Dcr,ech->Dcir);
+        printf("******* Period *******\nPtP_ACr = %f\nPtP_ACir = %f\nDCr = %f\nDCir = %f\n-----------\n",PtP_Acr,PtP_Acir,ech->Dcr,ech->Dcir);
         int SpO2;
         if (RsIR < 1) {
             SpO2 = RsIR * (-25) + 110;//fonction affine entre 0 et 1
