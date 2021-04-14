@@ -37,8 +37,8 @@ typedef struct{
     int Dcr;
     int Dcir;
     int periode;
-    bool premierePeriode;
-    bool passageParZero;
+    int premierePeriode;
+    int passageParZero;
 }param_mesure;
 
 typedef struct{
