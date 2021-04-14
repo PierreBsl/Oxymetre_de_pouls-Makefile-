@@ -37,8 +37,10 @@ typedef struct{
     float Dcir;
     int periode;
     int passageParZero;
-    int poulsPeriod1;
+    float poulsPeriod1;
     int SpO2Period1;
+    float PtP_ACr_prec;
+    float PtP_ACir_prec;
 }param_mesure;
 
 typedef struct{

@@ -36,6 +36,7 @@ void integrationTest(char* filename)
             myAbsorp = iir(myAbsorp,&iirparam);
             myOxy = mesure(myAbsorp,&mesureparam, myOxy);
             affichage(myOxy);
+            iteration++;
         }else{
             printf("End of file in Integration.c\n");
         }

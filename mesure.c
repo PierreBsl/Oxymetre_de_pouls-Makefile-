@@ -35,8 +35,25 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
         ech->Dcr = myAbsorp.dcr;
         ech->Dcir = myAbsorp.dcir;
 
-        float PtP_Acr = ech->MaxAcr - ech->MinAcr;
-        float PtP_Acir = ech->MaxAcir - ech->MinAcir;
+        float PtP_Acr;
+        float PtP_Acr1 = ech->MaxAcr - ech->MinAcr;
+        if(ech->PtP_ACr_prec==0){
+            PtP_Acr=PtP_Acr1;
+        }
+        else {
+            PtP_Acr = (PtP_Acr1 + ech->PtP_ACr_prec) / 2;
+        }
+        ech->PtP_ACr_prec = PtP_Acr;
+
+        float PtP_Acir;
+        float PtP_Acir1 = ech->MaxAcir - ech->MinAcir;
+        if(ech->PtP_ACir_prec==0){
+            PtP_Acir=PtP_Acir1;
+        }
+        else {
+            PtP_Acir = (PtP_Acir1 + ech->PtP_ACir_prec) / 2;
+        }
+        ech->PtP_ACir_prec = PtP_Acir;
 
         float RsIR = (PtP_Acr / ech->Dcr) / (PtP_Acir / ech->Dcir);
         printf("******* Period *******\nPtP_ACr = %f\nPtP_ACir = %f\nDCr = %f\nDCir = %f\n-----------\n",PtP_Acr,PtP_Acir,ech->Dcr,ech->Dcir);
@@ -46,28 +63,21 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
         } else {
             SpO2 = RsIR * (-35.7) + 120;//fonction affine entre 1 et 3.4
         }
-        int SpO2Final;
-        if(ech->SpO2Period1==0){
-            ech->SpO2Period1 = SpO2;
-            SpO2Final=SpO2;
-        }else {
-            SpO2Final = (SpO2 + ech->SpO2Period1) / 2;
-            ech->SpO2Period1 = SpO2;
-        }
 
         float period=(float)ech->periode;
-        int pulse = 60 / (period * 0.002); //toutes les 2ms
 
         int pulseFinal;
+
         if(ech->poulsPeriod1 == 0){
-            ech->poulsPeriod1 = pulse;
-            pulseFinal=pulse;
+            pulseFinal = 60 / (period * 0.002); //toutes les 2ms
         }else{
-            pulseFinal= (pulse + ech->poulsPeriod1) / 2;
-            ech->poulsPeriod1 = pulse;
+            period= (period + ech->poulsPeriod1) / 2;
+            pulseFinal = 60 / (period * 0.002); //toutes les 2ms
         }
 
-        myOxy1.spo2 = SpO2Final;
+        ech->poulsPeriod1 = ech->periode;
+
+        myOxy1.spo2 = SpO2;
         myOxy1.pouls = pulseFinal;
         ech->periode=0;
         ech->passageParZero=false;
@@ -88,4 +98,8 @@ void init_mesure(param_mesure* ech){
     ech->periode=0;
     ech->poulsPeriod1=0;
     ech->SpO2Period1=0;
+    ech->PtP_ACr_prec=0;
+    ech->PtP_ACir_prec=0;
+
+
 }
