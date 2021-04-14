@@ -53,7 +53,6 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
         int poulsFinal=(pouls+ech->poulsPeriod1)/2;
         ech->poulsPeriod1 = pouls;
 
-
         myOxy1.spo2 = SpO2Final;
         myOxy1.pouls = poulsFinal;
         ech->periode=0;
