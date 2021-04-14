@@ -10,8 +10,6 @@ void integrationTest(char* filename)
 {
     int file_state=0;
     absorp myAbsorp;
-    absorp myAbsorp1;
-    absorp myAbsorp2;
 
     oxy myOxy;
     // Déclaration pour FIR
@@ -29,9 +27,9 @@ void integrationTest(char* filename)
     while(file_state != EOF){
         myAbsorp = lireFichier(myFile,&file_state);
         if(file_state!=EOF){
-            myAbsorp1 = fir(myAbsorp,&firparam);
-            myAbsorp2 = iir(myAbsorp1,&iirparam);
-            myOxy = mesure(myAbsorp2,&mesureparam, myOxy);
+            myAbsorp = fir(myAbsorp,&firparam);
+            myAbsorp = iir(myAbsorp,&iirparam);
+            myOxy = mesure(myAbsorp,&mesureparam, myOxy);
             printf("SpO2 = %d\n",myOxy.spo2);
             printf("Pouls = %d\n",myOxy.pouls);
             affichage(myOxy);
