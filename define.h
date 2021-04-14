@@ -30,12 +30,12 @@ typedef struct{
   
   ------------------------------------------------------------*/
 typedef struct{
-    int MaxAcr;
-    int MaxAcir;
-    int MinAcr;
-    int MinAcir;
-    int Dcr;
-    int Dcir;
+    float MaxAcr;
+    float MaxAcir;
+    float MinAcr;
+    float MinAcir;
+    float Dcr;
+    float Dcir;
     int periode;
     int passageParZero;
     int poulsPeriod1;

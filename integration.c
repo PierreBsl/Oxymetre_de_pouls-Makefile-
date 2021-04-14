@@ -12,12 +12,15 @@ void integrationTest(char* filename)
     absorp myAbsorp;
 
     oxy myOxy;
+
     // Déclaration pour FIR
     param_fir firparam;
     init_fir(&firparam);
+
     // Déclaration pour IIR
     param_iir iirparam;
     init_iir(&iirparam);
+
     // Déclaration pour Mesure
     param_mesure mesureparam;
     init_mesure(&mesureparam);
