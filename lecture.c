@@ -19,9 +19,9 @@ absorp lecture(FILE* file_pf, int* file_state){
         // et donc se déplacer dans le fichier jusqu'à obtenir 4 valeurs consécutives
         *file_state= fscanf(file_pf, "%f,%f,%f,%f", &ACr,&DCr,&ACir,&DCir);
     }
-    myAbsorp.acr=ACr-2048;//Initialisation de la valeur d'ACr
+    myAbsorp.acr=ACr-2048;//Recentrer la valeur d'ACr (cf doc)
     myAbsorp.dcr=DCr;
-    myAbsorp.acir=ACir-2048;//Initialisation de la valeur d'ACir
+    myAbsorp.acir=ACir-2048;//Recentrer la valeur d'ACir (cf doc)
     myAbsorp.dcir=DCir;
 	return myAbsorp; // return EOF flag
 
