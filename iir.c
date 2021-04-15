@@ -1,4 +1,7 @@
 #include "iir.h"
+#include "fichiers.h"
+
+float alpha = 0.992;
 
 absorp iirTest(char* filename){
 	absorp myAbsorp;
@@ -14,13 +17,14 @@ absorp iirTest(char* filename){
         if(file_state == EOF){
             return myAbsorp;
         }else{
-            myAbsorp = iir(myAbsorpTmp, &preAbsorp);
+            myAbsorp = iir(myAbsorpTmp, &preAbsorp); //on applique le filtre
         }
     }
     return myAbsorp;
 }
 absorp iir(absorp myAbsorp, param_iir* preAbsorp){
 
+    //on applique la formule du filtrage IIR sur les composantes acr et acir
     preAbsorp->y_moins_un_acr = myAbsorp.acr - preAbsorp->x_moins_un_acr + alpha*preAbsorp->y_moins_un_acr;
     preAbsorp->y_moins_un_acir = myAbsorp.acir - preAbsorp->x_moins_un_acir + alpha*preAbsorp->y_moins_un_acir;
     preAbsorp->x_moins_un_acr = myAbsorp.acr;

@@ -10,7 +10,6 @@ void integrationTest(char* filename)
 {
     int file_state=0;
     absorp myAbsorp;
-
     oxy myOxy;
     myOxy.spo2=0;
     myOxy.pouls=0;
@@ -27,8 +26,9 @@ void integrationTest(char* filename)
     param_mesure mesureparam;
     init_mesure(&mesureparam);
 
-    FILE* myFile = initFichier(filename); //mettre record.1.dat
+    FILE* myFile = initFichier(filename);//On lit le fichier brut
 
+    int iteration = 0;
     while(file_state != EOF){
         myAbsorp = lecture(myFile,&file_state);
         if(file_state!=EOF){
