@@ -89,8 +89,8 @@ oxy mesure(absorp myAbsorp, param_mesure* ech, oxy myOxy1){
         ech->MinAcr=0;
         ech->MinAcir=0;
 
-        //printf("SpO2 = %d\n",myOxy1.spo2);
-        //printf("Pouls = %d\n\n",myOxy1.pouls);
+        printf("----------\nSpO2 = %d\n",myOxy1.spo2);
+        printf("Pouls = %d\n",myOxy1.pouls);
     }
     ech->periode++;//On incrémente la nouvelle période
     return myOxy1;//On retourne la valeur de myOxy
